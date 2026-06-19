@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WA Message Reader</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 300px;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      background: #0f1014;
+      color: #e9edef;
+      padding: 20px 18px 18px;
+    }
+    .logo {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #25d366, #1f8a5b);
+      color: #062b1a;
+      font-weight: 800;
+      font-size: 13px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 12px;
+    }
+    h1 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .sub { font-size: 11px; color: #8696a0; margin-bottom: 16px; }
+    .step {
+      display: flex; gap: 10px; align-items: flex-start;
+      margin-bottom: 11px;
+    }
+    .num {
+      min-width: 22px; height: 22px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #062b1a;
+      font-weight: 700; font-size: 11px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .step p { color: #aebac1; line-height: 1.5; font-size: 12.5px; }
+    .step p strong { color: #e9edef; }
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin: 16px 0;
+    }
+    .open-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #25d366;
+      color: #062b1a;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 13px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: filter 0.15s ease;
+    }
+    .open-btn:hover { filter: brightness(1.1); }
+    .privacy {
+      margin-top: 13px;
+      font-size: 11px;
+      color: #6a7882;
+      text-align: center;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo" aria-hidden="true">WA</div>
+  <h1>WA Message Reader</h1>
+  <p class="sub">Reads bubbles from WhatsApp Web</p>
+
+  <div class="step">
+    <div class="num">1</div>
+    <p>Open <strong>WhatsApp Web</strong> and log in with your phone's QR code.</p>
+  </div>
+  <div class="step">
+    <div class="num">2</div>
+    <p>Click any <strong>conversation</strong> in the left sidebar.</p>
+  </div>
+  <div class="step">
+    <div class="num">3</div>
+    <p>The <strong>reader panel</strong> appears bottom-right automatically. Click the green FAB to toggle it.</p>
+  </div>
+  <div class="step">
+    <div class="num">4</div>
+    <p>Use <strong>Re-scan</strong> after scrolling up to load older messages. <strong>Copy all</strong> exports the full log.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <a class="open-btn" href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+    Open WhatsApp Web
+  </a>
+
+  <p class="privacy">Everything runs locally in your browser.<br>No data leaves the page. <code>permissions: []</code></p>
+</body>
+</html>
